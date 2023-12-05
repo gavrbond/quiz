@@ -41,7 +41,7 @@ function App() {
         {step !== questions.length ? (
           <Game
             nextQuestions={nextQuestions}
-            question={currentQuestions}
+            questions={currentQuestions}
             progressBar={progressBar}
           />
         ) : (

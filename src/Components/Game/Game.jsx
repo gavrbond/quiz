@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./Game.module.css"
-const Game = ({ question, nextQuestions, progressBar }) => {
+const Game = ({ questions, nextQuestions, progressBar }) => {
   return (
     <div className={styles.container}>
       <div className={styles.progress}>
@@ -11,7 +11,7 @@ const Game = ({ question, nextQuestions, progressBar }) => {
       </div>
       <div className={styles.title}>{question.title}?</div>
       <ul>
-        {question.variants.map((item, index) => {
+        {questions.variants.map((item, index) => {
           return (
             <li
               onClick={() => nextQuestions(index)}
